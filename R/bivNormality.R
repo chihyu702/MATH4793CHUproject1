@@ -1,13 +1,13 @@
 #' bivNormality
 #'
-#' @param x the dataset contain two variabes
+#' @param x the data set contain two variables
 #'
 #' @return
 #' @export
 #'
-#' @examples
+#' @examples bivNormality(x=matrix(c(T4_6$V1, T4_6$V2), byrow=FALSE))
 bivNormality <- function(x, alpha=0.08){
-  # x is a matrix
+  # x is a matrix v
   n <-nrow(x)
   meanX <- colMeans(x)
   S <- cov(x)
@@ -18,6 +18,7 @@ bivNormality <- function(x, alpha=0.08){
   d <- numeric(n)
 
   # calculate distance from center
+  # result 4.7
   for (i in 1:n){
     d[i]=t(x[i,]-meanX)%*%S_inv%*%(x[i,]-meanX)
   }
@@ -34,7 +35,7 @@ bivNormality <- function(x, alpha=0.08){
   expectedper <- 1-alpha
 
   list(
-    ellipse = round(d,4),
+    ellipse = round(sqrt(d),4),
     actual_percentage = actualper,
     expected_percentage =  expectedper
   )
