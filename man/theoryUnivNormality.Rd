@@ -7,8 +7,15 @@
 theoryUnivNormality(x)
 }
 \arguments{
-\item{x}{the dataset going to test univariate Normality through theory}
+\item{x}{the num vector going to test univariate Normality through theory}
+}
+\value{
+the the list of vector proportion that within first and second interval
+         and if it meet the theoretical expectation
 }
 \description{
 theoryUnivNormality
+}
+\examples{
+theoryUnivNormality(x = rnorm(100, mean = 0, sd = 1))
 }
