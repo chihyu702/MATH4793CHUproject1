@@ -7,8 +7,15 @@
 bivNormality(x, alpha = 0.08)
 }
 \arguments{
-\item{x}{the dataset contain two variabes}
+\item{x}{the data set contain two variables}
+}
+\value{
+an ellipse around the bivariate data and a list containing
+the actual and predicted percentage contents of the ellipse
 }
 \description{
 bivNormality
+}
+\examples{
+bivNormality(x=matrix(c(T4_6$V1, T4_6$V2), byrow=FALSE))
 }

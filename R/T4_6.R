@@ -1,8 +1,9 @@
 #' T1-5 data
 #'
-#' This is a data about air-pollution. This contains 42 measurements with 7 variables
+#' This is a data about psychological test administered to Peruvian
+#' teenagers. This contains 130 measurements with 7 variables
 #'
-#' @format A data frame with 42 rows and 7 columns
+#' @format A data frame with 130 rows and 7 columns
 #' \describe{
 #'   \item{V1}{Indep}
 #'   \item{V2}{Supp}

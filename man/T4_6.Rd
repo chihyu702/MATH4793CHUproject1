@@ -5,7 +5,7 @@
 \alias{T4_6}
 \title{T1-5 data}
 \format{
-A data frame with 42 rows and 7 columns
+A data frame with 130 rows and 7 columns
 \describe{
   \item{V1}{Indep}
   \item{V2}{Supp}
@@ -24,6 +24,7 @@ text book
 T4_6
 }
 \description{
-This is a data about air-pollution. This contains 42 measurements with 7 variables
+This is a data about psychological test administered to Peruvian
+teenagers. This contains 130 measurements with 7 variables
 }
 \keyword{datasets}

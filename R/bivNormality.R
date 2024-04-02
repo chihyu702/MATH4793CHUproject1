@@ -2,7 +2,9 @@
 #'
 #' @param x the data set contain two variables
 #'
-#' @return
+#' @return an ellipse around the bivariate data and a list containing
+#' the actual and predicted percentage contents of the ellipse
+
 #' @export
 #'
 #' @examples bivNormality(x=matrix(c(T4_6$V1, T4_6$V2), byrow=FALSE))
@@ -34,6 +36,8 @@ bivNormality <- function(x, alpha=0.08){
   # expected percentage
   expectedper <- 1-alpha
 
+  # return the list
+  # sine the d is actually d^2, so sqrt it here to make it become the actual distance
   list(
     ellipse = round(sqrt(d),4),
     actual_percentage = actualper,
