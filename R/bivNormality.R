@@ -19,7 +19,7 @@ bivNormality <- function(x, alpha=0.08){
 
   # calculate distance from center
   for (i in 1:n){
-    d[i]=t(x-meanx)%*%S_inv%*%(x-meanx)
+    d[i]=t(x[i,]-meanX)%*%S_inv%*%(x[i,]-meanX)
   }
 
   # d<=chi-square distribution with p degrees of freedom.
@@ -34,8 +34,8 @@ bivNormality <- function(x, alpha=0.08){
   expectedper <- 1-alpha
 
   list(
-    ellipse = d,
-    actual_percentage = actual_percentage,
-    expected_percentage = expected_percentage
+    ellipse = round(d,4),
+    actual_percentage = actualper,
+    expected_percentage =  expectedper
   )
 }
