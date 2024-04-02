@@ -8,7 +8,7 @@
 #' @examples
 bivNormality <- function(x, alpha=0.08){
   # x is a matrix
-  n <-nrow(n)
+  n <-nrow(x)
   meanX <- colMeans(x)
   S <- cov(x)
   S_inv <- solve(S) # inverse matrix of S
