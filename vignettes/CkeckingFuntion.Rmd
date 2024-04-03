@@ -37,8 +37,11 @@ getQQplot(T4_6$V1)
 corQ(T4_6$V1)
 ```
 
-
-
+### test for bivariate Normality
+```{r}
+x <- cbind(sales, profits)
+bivNormality(x, alpha=0.5)
+```
 
 
 
