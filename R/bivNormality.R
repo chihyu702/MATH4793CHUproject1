@@ -1,6 +1,7 @@
 #' bivNormality
 #'
 #' @param x the data set contain two variables
+#' @param alpha the confidence that going to test
 #'
 #' @return an ellipse around the bivariate data and a list containing
 #' the actual and predicted percentage contents of the ellipse
@@ -36,6 +37,7 @@ bivNormality <- function(x, alpha=0.08){
   # expected percentage
   expectedper <- 1-alpha
 
+  plot(x)
   # return the list
   # sine the d is actually d^2, so sqrt it here to make it become the actual distance
   list(

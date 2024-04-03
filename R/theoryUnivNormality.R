@@ -28,8 +28,10 @@ theoryUnivNormality <- function(x){
   test2 <- 0.628/sqrt(n)
 
   # nomality test, should show if true or false (meet the theoretical expectation or not)
-  test1sd <- abs(p1-expected1) > test1
-  test2sd <- abs(p2-expected2) > test2
+  test1sd <- abs(p1-expected1) >= test1
+  test2sd <- abs(p2-expected2) >= test2
+
+  hist(x, breaks = 10)
 
   # print out the result
   return(list(
@@ -38,4 +40,5 @@ theoryUnivNormality <- function(x){
     propWithinFirstsd= test1sd,
     propWithinSecondsd= test1sd
   ))
+
 }

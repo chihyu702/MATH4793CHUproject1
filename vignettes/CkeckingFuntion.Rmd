@@ -1,0 +1,37 @@
+---
+title: "CkeckingFuntion"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{CkeckingFuntion}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(MATH4793CHUProject1)
+```
+
+# Project 1
+## Test univariate Normality by theory
+```{r}
+library(MATH4793CHUProject1)
+theoryUnivNormality(T4_6$V2)
+```
+
+## construct a Q-Q plot
+```{r}
+getQQplot(T4_6$V1)
+```
+
+## correlation of Q_Q plot
+```{r}
+boxcox(T4_6$V1)
+```
+

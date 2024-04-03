@@ -8,6 +8,8 @@ bivNormality(x, alpha = 0.08)
 }
 \arguments{
 \item{x}{the data set contain two variables}
+
+\item{alpha}{the confidence that going to test}
 }
 \value{
 an ellipse around the bivariate data and a list containing
