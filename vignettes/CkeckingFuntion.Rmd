@@ -19,18 +19,20 @@ library(MATH4793CHUProject1)
 ```
 
 # Project 1
-## Test univariate Normality by theory
+
+## Test funtion
+### Test univariate Normality by theory
 ```{r}
 library(MATH4793CHUProject1)
-theoryUnivNormality(T4_6$V2)
+theoryUnivNormality(T4_6$V1)
 ```
 
-## construct a Q-Q plot
+### construct a Q-Q plot
 ```{r}
 getQQplot(T4_6$V1)
 ```
 
-## correlation of Q_Q plot
+## correlation of boxcox plot
 ```{r}
 boxcox(T4_6$V1)
 ```

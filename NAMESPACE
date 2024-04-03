@@ -3,5 +3,6 @@
 export(DetectingOutliers)
 export(bivNormality)
 export(boxcox)
+export(corQ)
 export(getQQplot)
 export(theoryUnivNormality)
