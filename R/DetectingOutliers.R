@@ -28,7 +28,7 @@ DetectingOutliers <- function(x){
   }
 
   # calculate the standardized values, z.
-  z <- matrix(, nrow=n, ncol=p)
+  z <- matrix(nrow=n, ncol=p)
   for (j in 1:n){
     for (k in 1:p){
       z[j,k] = (x[j,k]- means[k]/sqrt(S[k,k]))
