@@ -38,10 +38,18 @@ corQ(T4_6$V1)
 ```
 
 ### test for bivariate Normality
+textbook example
 ```{r}
 x <- cbind(sales, profits)
 bivNormality(x, alpha=0.5)
 ```
+
+dataset example
+```{r}
+x <- cbind(T4_6$V1, T4_6$V2)
+bivNormality(x, alpha=0.5)
+```
+
 
 
 
