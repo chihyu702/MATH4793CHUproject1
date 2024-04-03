@@ -7,7 +7,7 @@
 #'
 #' @examples
 corQ <- function(x) {
-  n <- length(data)
+  n <- length(x)
 
   # number of distance store in d
   # q is the vector of quantile
@@ -24,5 +24,5 @@ corQ <- function(x) {
   denominator <- sqrt(sum((x - meanX)^2) * sum((q - meanQ)^2))
 
   rQ <- up / denominator
-  return(rQ)
+  rQ
 }

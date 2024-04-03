@@ -32,6 +32,16 @@ theoryUnivNormality(T4_6$V1)
 getQQplot(T4_6$V1)
 ```
 
+### find the correlation coefficient of the Q-Q plot
+```{r}
+corQ(T4_6$V1)
+```
+
+
+
+
+
+
 ## correlation of boxcox plot
 ```{r}
 boxcox(T4_6$V1)
