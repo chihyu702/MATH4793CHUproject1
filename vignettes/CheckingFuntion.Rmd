@@ -21,7 +21,6 @@ library(MATH4793CHUProject1)
 ```
 ### Test univariate Normality by theory
 ```{r}
-as.numeric(T4_6$V1)
 theoryUnivNormality(x=T4_6$V1)
 ```
 
@@ -70,11 +69,75 @@ this one suppose to output
 DetectingOutliers(T4_6)$outliers
 ```
 
-
-
-
-## correlation of boxcox plot
+### correlation of boxcox plot
 ```{r}
 boxcox(T4_6$V1)
 ```
+
+
+# ANSWERING Question
+## a) examine marginal normality
+Use the Q-Q plot to visualize the marginal normality.  This is because plots of the sample quantile versus the quantile one would expect to observe if the observations actually were normally distributed. When the points lie very nearly along a straight line, the normality assumption remains tenable. Normality is suspect if the points deviate from a straight line. (from textbook)
+
+### independence
+Suspect about the Normality because it seem like a lot of dot is away from the line. 
+```{r}
+getQQplot(T4_6$V1)
+```
+
+Use the normal approximation to the sampling distribution of p_hat is departures from an assumed normal distribution for the  characteristic or not.
+```{r}
+theoryUnivNormality(x=T4_6$V1)
+```
+The false mean that the data does not show evidence against normality within the scope of these specific checks. 
+
+### support
+Suspect about the Normality because it seem like a lot of dot is away from the line.
+```{r}
+getQQplot(T4_6$V2)
+```
+
+Use the normal approximation to the sampling distribution of p_hat is departures from an assumed normal distribution for the  characteristic or not.
+```{r}
+theoryUnivNormality(x=T4_6$V2)
+```
+The false mean that the data does not show evidence against normality within the scope of these specific checks. 
+
+
+### benevolence
+This seem like normal distribution, becasue the dot is nearly along a straight line.
+```{r}
+getQQplot(T4_6$V3)
+```
+
+### conformity
+This seem like normal distribution, because the dot is nearly along a straight line.
+```{r}
+getQQplot(T4_6$V4)
+```
+
+
+
+### leadership
+This does not seem like normal distribution, because many dot are away from straight line.
+```{r}
+getQQplot(T4_6$V5)
+```
+
+
+## b) multivariate normality
+```{r}
+y <- cbind(T4_6$V1, T4_6$V2, T4_6$V3, T4_6$V4, T4_6$V5)
+testMVN(y)
+```
+
+## c) transformation that would make it more nearly normal
+```{r}
+
+```
+
+
+
+
+
 
