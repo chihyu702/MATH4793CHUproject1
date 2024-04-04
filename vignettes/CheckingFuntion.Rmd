@@ -140,33 +140,14 @@ h <- boxcox(T4_6$V1,alpha = 0.05, iter = 10000)
 h$lambda[1]
 ```
 
-```{r}
-mb <- MASS::boxcox(T4_6$V1 ~ 1)
-ind <- which.max(mb$y)
-ind
-mb$x[ind]
-```
-
 ### b. supp
 ```{r}
 h <- boxcox(T4_6$V2,alpha = 0.05, iter = 10000)
 h$lambda[1]
-```
-```{r}
-mb <- MASS::boxcox(T4_6$V2 ~ 1)
-ind <- which.max(mb$y)
-ind
-mb$x[ind]
 ```
 
 ### b. socio
 ```{r}
 h <- boxcox(T4_6$V5,alpha = 0.05, iter = 10000)
 h$lambda[1]
-```
-```{r}
-mb <- MASS::boxcox(T4_6$V5 ~ 1)
-ind <- which.max(mb$y)
-ind
-mb$x[ind]
 ```

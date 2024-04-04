@@ -4,7 +4,7 @@ Title: MATH4793 Project1
 Version: 0.1.0
 Author: Chih-Yu Chu
 Maintainer: Chih-Yu Chu <chih.yu.chu-1@ou.edu>
-Description: This is the package for MATH4793 Project 1
+Description: This is the package for the function of MATH4793 Project 1.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true

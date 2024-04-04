@@ -7,7 +7,9 @@
 testMVN(x, dim = 2)
 }
 \arguments{
-\item{x}{}
+\item{x}{the dataset, could a a matrix, that going to test}
+
+\item{dim}{the number of variables (columns) in the matrix}
 }
 \description{
 testMVN

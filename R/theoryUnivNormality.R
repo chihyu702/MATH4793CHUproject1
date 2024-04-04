@@ -6,6 +6,11 @@
 #'          and if it meet the theoretical expectation
 #' @export
 #'
+#' @importFrom graphics hist
+#' @importFrom graphics abline
+#' @importFrom graphics segments
+#' @importFrom graphics stripchart
+#'
 #' @examples theoryUnivNormality(x = rnorm(100, mean = 0, sd = 1))
 theoryUnivNormality <- function(x = rnorm(100, mean = 0, sd = 1)){
   n <- length(x)

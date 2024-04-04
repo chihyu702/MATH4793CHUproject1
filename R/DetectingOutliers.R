@@ -6,6 +6,8 @@
 #'
 #' @return the matrix of s, the generalized squared distance, and the outlier
 #' @export
+#' @importFrom stats cov
+#' @importFrom stats quantile
 #'
 #' @examples DetectingOutliers (T4_6)
 DetectingOutliers <- function(x){

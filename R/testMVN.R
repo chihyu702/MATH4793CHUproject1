@@ -1,9 +1,12 @@
 #' testMVN
 #'
-#' @param x
+#' @param x the dataset, could a a matrix, that going to test
+#' @param dim the number of variables (columns) in the matrix
 #'
 #' @return
 #' @export
+#'
+#' @importFrom stats qchisq
 #'
 #' @examples
 testMVN <- function(x, dim=2){

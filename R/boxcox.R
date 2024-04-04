@@ -6,8 +6,10 @@
 #' @param alpha the ci
 #' @param iter number of time we are going to run
 #'
-#' @return
+#' @return a list
 #' @export
+#'
+#' @importFrom stats optimize
 #'
 #' @examples
 boxcox <- function(xs, alpha=0.05, iter=1000){

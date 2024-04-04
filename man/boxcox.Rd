@@ -13,6 +13,9 @@ boxcox(xs, alpha = 0.05, iter = 1000)
 
 \item{iter}{number of time we are going to run}
 }
+\value{
+a list
+}
 \description{
 carries out the boxcox transformation
 }
