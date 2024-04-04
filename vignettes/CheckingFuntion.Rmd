@@ -14,21 +14,15 @@ knitr::opts_chunk$set(
 )
 ```
 
-```{r setup}
-library(MATH4793CHUProject1)
-```
-
 # Project 1
-
 ## Test funtion
 ```{r}
 library(MATH4793CHUProject1)
-
 ```
-
 ### Test univariate Normality by theory
 ```{r}
-theoryUnivNormality(T4_6$V1)
+as.numeric(T4_6$V1)
+theoryUnivNormality(x=T4_6$V1)
 ```
 
 ### construct a Q-Q plot
@@ -54,7 +48,7 @@ x <- cbind(T4_6$V1, T4_6$V2)
 bivNormality(x, alpha=0.5)
 ```
 
-### MVN
+### test MVN
 textbook example
 ```{r}
 x <- cbind(sales, profits)
@@ -67,6 +61,14 @@ y <- cbind(T4_6$V1, T4_6$V2, T4_6$V3, T4_6$V4, T4_6$V5)
 testMVN(y)
 ```
 
+### Decting Outliers
+this one suppose to output  
+1. the dotplot for each variable  
+2. the scatter plot each pair of variable  (since it is too long, so make is invisible. but could modify through funtion)
+3. the list contain standardized_values, generalized_squared_distance, and ouliers (make it invisible)  , just print the outliers out
+```{r}
+DetectingOutliers(T4_6)$outliers
+```
 
 
 

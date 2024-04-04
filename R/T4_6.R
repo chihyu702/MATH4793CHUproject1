@@ -1,4 +1,4 @@
-#' T1-5 data
+#' T4_6 data
 #'
 #' This is a data about psychological test administered to Peruvian
 #' teenagers. This contains 130 measurements with 7 variables

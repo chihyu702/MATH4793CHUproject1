@@ -3,7 +3,7 @@
 \docType{data}
 \name{T4_6}
 \alias{T4_6}
-\title{T1-5 data}
+\title{T4_6 data}
 \format{
 A data frame with 130 rows and 7 columns
 \describe{

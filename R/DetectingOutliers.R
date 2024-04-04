@@ -7,7 +7,7 @@
 #' @return the matrix of s, the generalized squared distance, and the outlier
 #' @export
 #'
-#' @examples DetectingOutliers (T1_4)
+#' @examples DetectingOutliers (T4_6)
 DetectingOutliers <- function(x){
   n <- nrow(x)
   p <- ncol(x)
@@ -21,19 +21,20 @@ DetectingOutliers <- function(x){
   }
 
   # Make a scatter plot for each pair of variables.
-  for (i in 1:(p-1)){
-    for (j in (i+1):p){
-      plot(x[,i], x[,j],  xlab = paste("Variable", i), ylab = paste("Variable", j))
-    }
-  }
+  #scatterplot <- for (i in 1:(p-1)){
+  # for (j in (i+1):p){
+  #   plot(x[,i], x[,j],  xlab = paste("Variable", i), ylab = paste("Variable", j))
+  #  }
+  # }
 
   # calculate the standardized values, z.
   z <- matrix(nrow=n, ncol=p)
   for (j in 1:n){
     for (k in 1:p){
-      z[j,k] = (x[j,k]- means[k]/sqrt(S[k,k]))
+      z[j,k] = ((x[j,k]- means[k])/sqrt(S[k,k]))
     }
   }
+  out <- apply(abs(z), 1, function(row) any(row > 3))
 
   # calculate the generalized squared distance
   square_dis <- rep(0, n)
@@ -44,7 +45,9 @@ DetectingOutliers <- function(x){
   # examine the outliter
   # in the chi-square plot, the outlier is farthers from the origin, test for 0.975 here
   checkpoint <- qchisq(0.975, df=p)
-  outliers <- which(square_dis > checkpoint )
+  outliers <- which(square_dis > checkpoint | out)
 
-  return(list(standardized_values = z, generalized_squared_distance = square_dis, ouliters=outliters))
+  invisible(list(standardized_values = z,
+                 generalized_squared_distance = square_dis,
+                 outliers=outliers))
 }

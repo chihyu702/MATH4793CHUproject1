@@ -16,5 +16,5 @@ the matrix of s, the generalized squared distance, and the outlier
 this is the function that would carries out step 1-4 "Setps for Detecting outliers" in textbokk
 }
 \examples{
-DetectingOutliers (T1_4)
+DetectingOutliers (T4_6)
 }
