@@ -13,7 +13,7 @@ corQ <- function(x) {
   # q is the vector of quantile
   q <- numeric(n)
   for (i in 1:n){
-    q[i] = qnorm((i-0.5)/n)
+    q[i] = qchisq((i-0.5)/n, df=2)
   }
 
   # calculate the rQ, base on 4-31

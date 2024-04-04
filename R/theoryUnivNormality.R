@@ -7,7 +7,7 @@
 #' @export
 #'
 #' @examples theoryUnivNormality(x = rnorm(100, mean = 0, sd = 1))
-theoryUnivNormality <- function(x){
+theoryUnivNormality <- function(x = rnorm(100, mean = 0, sd = 1)){
   n <- length(x)
   mean <- mean(x)
   sd <- sd(x)

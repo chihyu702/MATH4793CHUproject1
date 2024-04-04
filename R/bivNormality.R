@@ -30,6 +30,7 @@ bivNormality <- function(x, alpha=0.08){
   # variables = 2, df = 2
   chi_test<-qchisq(1-alpha, df =2)
   # number of data that are within the ellipse (satisfy the equation,d<=chi-square)
+  inside <- d<=chi_test
   count <- sum(d<=chi_test)
   # expected percentage
   actualper <- count/n
@@ -37,11 +38,12 @@ bivNormality <- function(x, alpha=0.08){
   # expected percentage
   expectedper <- 1-alpha
 
-  plot(x)
+  # invisible(plot(x))
   # return the list
   # sine the d is actually d^2, so sqrt it here to make it become the actual distance
   list(
     ellipse = round(d,4),
+    within_the_contour = inside,
     actual_percentage = actualper,
     expected_percentage =  expectedper
   )

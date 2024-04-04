@@ -4,7 +4,7 @@
 \alias{theoryUnivNormality}
 \title{theoryUnivNormality}
 \usage{
-theoryUnivNormality(x)
+theoryUnivNormality(x = rnorm(100, mean = 0, sd = 1))
 }
 \arguments{
 \item{x}{the num vector going to test univariate Normality through theory}

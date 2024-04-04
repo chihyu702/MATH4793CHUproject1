@@ -1,5 +1,5 @@
 ---
-title: "CkeckingFuntion"
+title: "CheckingFuntion"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{CkeckingFuntion}
@@ -21,9 +21,13 @@ library(MATH4793CHUProject1)
 # Project 1
 
 ## Test funtion
-### Test univariate Normality by theory
 ```{r}
 library(MATH4793CHUProject1)
+
+```
+
+### Test univariate Normality by theory
+```{r}
 theoryUnivNormality(T4_6$V1)
 ```
 
@@ -49,6 +53,20 @@ dataset example
 x <- cbind(T4_6$V1, T4_6$V2)
 bivNormality(x, alpha=0.5)
 ```
+
+### MVN
+textbook example
+```{r}
+x <- cbind(sales, profits)
+testMVN(x)
+```
+
+dataset example
+```{r}
+y <- cbind(T4_6$V1, T4_6$V2, T4_6$V3, T4_6$V4, T4_6$V5)
+testMVN(y)
+```
+
 
 
 
