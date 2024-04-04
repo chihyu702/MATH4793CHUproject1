@@ -132,7 +132,7 @@ testMVN(y)
 ```
 
 ## c) transformation that would make it more nearly normal
-from part a), we know v1(independence) and v2(supp) does not seem to be normal. AND V5 (socio) is nonnormal for sure.
+From part a), we know v1(independence) and v2(supp) does not seem to be normal. AND V5 (socio) is nonnormal for sure.
 
 ### a. independence
 ```{r}
