@@ -132,12 +132,41 @@ testMVN(y)
 ```
 
 ## c) transformation that would make it more nearly normal
-```{r}
+from part a), we know v1(independence) and v2(supp) does not seem to be normal. AND V5 (socio) is nonnormal for sure.
 
+### a. independence
+```{r}
+h <- boxcox(T4_6$V1,alpha = 0.05, iter = 10000)
+h$lambda[1]
 ```
 
+```{r}
+mb <- MASS::boxcox(T4_6$V1 ~ 1)
+ind <- which.max(mb$y)
+ind
+mb$x[ind]
+```
 
+### b. supp
+```{r}
+h <- boxcox(T4_6$V2,alpha = 0.05, iter = 10000)
+h$lambda[1]
+```
+```{r}
+mb <- MASS::boxcox(T4_6$V2 ~ 1)
+ind <- which.max(mb$y)
+ind
+mb$x[ind]
+```
 
-
-
-
+### b. socio
+```{r}
+h <- boxcox(T4_6$V5,alpha = 0.05, iter = 10000)
+h$lambda[1]
+```
+```{r}
+mb <- MASS::boxcox(T4_6$V5 ~ 1)
+ind <- which.max(mb$y)
+ind
+mb$x[ind]
+```
